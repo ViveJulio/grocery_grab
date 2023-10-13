@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">    <title>Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap/bootstrap.min.css') }}">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"j></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                     </li>
                 </ul>
             <form class="d-flex align-items-center">
-                <a href="#favorites" class="btn btn-secondary mx-3">Bag</a>
+                <a href="#favorites" class="btn btn-secondary mx-3 btn-sm">Go To Bag</a>
                 <div class="dropdown">
                     <p class="mt-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{user.first_name}}<img src="https://th.bing.com/th/id/R.7ea4af7d8401d2b43ee841bfa2abe89d?rik=xidyUKdveUKULQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-download-icons-logos-emojis-users-2240.png&ehk=2%2bOqgdMZqFkKaBclc%2fPL9B86vLju3iBGiFmH64kXaTM%3d&risl=&pid=ImgRaw&r=0" width="50" alt="User Icon" class="rounded-circle mx-2"></p>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" role="menu">
@@ -115,16 +116,17 @@
                 </div>
             </div>
         </div>
-        <div id="rightsidebar" class="sidebar">
-            <a class="btn btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasright" aria-controls="offcanvasRight"><<</a>
-            <div class="offcanvas offcanvas-end" tab-index="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">Current Bag</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <p>my list</p>
-                </div>
+    </div>
+    <!-- sidebar -->
+    <div id="rightsidebar" class="sidebar position-absolute bottom-0 end-0 m-4">
+        <button class="btn btn-success rounded-circle sticky-right" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-bag"></i></button>
+        <div class="offcanvas offcanvas-end" tab-index="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Current Bag</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>my list</p>
             </div>
         </div>
     </div>
